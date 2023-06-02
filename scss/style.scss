@@ -1,0 +1,816 @@
+@use "variable";
+
+
+body{
+   line-height: 1.5;
+   color: #676767;
+   font-size: 14px;
+   letter-spacing: 0.1em;
+   font-family: variable.$font-ja;
+
+}
+img{
+   width: 100%;
+}
+
+a{
+   text-decoration: none;
+   color: #676767;
+
+}
+
+
+.clear::after{
+   content: "";
+   clear: both;
+   display: block;
+}
+
+.container{
+   max-width: 1280px;
+   margin: auto;
+   padding:  0 120px;
+   @include variable.mq(tab){
+      padding: 0 70px;
+      max-width: 1120px;
+   }
+
+   @include variable.mq(){
+      padding: 0 32px;
+   }
+}
+
+/*------------------------------------------------------
+section
+--------------------------------------------------------*/
+section{
+   padding: 120px 0 160px;
+   @include variable.mq(tab){
+      padding: 90px 0 120px;
+   }
+   @include variable.mq(){
+      padding: 90px 0;
+   }
+}
+
+
+.section-title{
+   font-size: 54px;
+   letter-spacing: 0.5em;
+   font-family: variable.$font-en;
+   font-weight: bold;
+   position: relative;
+   display: inline-block;
+
+   @include variable.mq(tab){
+      font-size: 42px;
+   }
+   @include variable.mq(){
+      font-size: 38px;
+      line-height: 1.3;
+   }
+
+}
+
+.section-subtitle{
+   font-size: 18px;
+   letter-spacing: .3em;
+  
+   @include variable.mq(){
+      font-size: 15px;
+   }
+}
+/*------------------------------------------------------
+header
+--------------------------------------------------------*/
+header{
+   height: 83px;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+   background-color: #fff;
+
+   .container{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+   @include variable.mq(){
+      height: 70px;
+      .container{
+         padding: 0 24px;
+      }
+   }
+}
+
+h1{
+   font-size: 24px;
+   font-weight: 600;
+   line-height: 83px;
+   font-family: variable.$font-en;
+   letter-spacing: .15em;
+   @include variable.mq(tab){
+      font-size: 18px;
+   }
+   @include variable.mq(){
+      font-size: 17px;
+      line-height: 70px;
+   }
+   @media screen and (max-width: 330px) {
+      font-size: 16px;
+   }
+}
+
+.head-nav{
+
+   line-height: 83px;
+   font-size: 16px;
+   ul{
+      display: flex;
+   }
+   @include variable.mq(){
+      display: none;
+   }
+}
+
+.nav-item{
+   & + & {
+      margin-left: 40px;
+      @include variable.mq(tab){
+         margin-left: 30px;
+      }
+   }
+   
+   a{
+      transition: all .3s;
+      padding-bottom: 5px;
+      border-bottom: 1px solid transparent;
+      font-family: variable.$font-en;
+      @include variable.mq(tab){
+         font-size: 14px;
+      }
+
+      &:hover{
+         border-color:#676767;
+      }
+   }
+
+}
+
+.head-nav-sp{
+   font-family: variable.$font-en;
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 106px;
+   @include variable.mq(pc){
+      display: none;
+   }
+   @include variable.mq(tab){
+      display: none;
+   }
+
+   p {
+      position: absolute;
+      height: 70px;
+      background-color: #fff;
+      padding-top: 22px;
+      z-index: 100;
+      width: 100%;
+      a{
+         display: inline-block;
+         padding: 3px 3px 3px 20px;
+         width: 100%;
+         background-color: #fff;
+         span{
+            font-size: 10px;
+         }
+      }
+   }
+   &:hover{
+      .nav-list-sp{
+         transform: translateY(0);
+      }
+   }
+  
+
+}
+.nav-list-sp{
+   overflow: hidden;
+   transform: translateY(-110%);
+   transition: all .5s;
+   position: absolute;
+   top: 70px;
+   width: 100%;
+}
+.nav-item-sp{
+   line-height: 46px;
+   width: 100%;
+   & + &{
+      margin-top: 2px;
+   }
+   a{
+      width: 100%;
+      display: inline-block;
+      background-color: rgba(#fff, 0.9);
+      padding-left: 20px;
+      transition: all .3s;
+      &:hover{
+         background-color: rgba(#676767, 0.9);
+         color: #fff;
+      }
+   }
+}
+/*------------------------------------------------------
+top
+--------------------------------------------------------*/
+.top{
+   background-image: url(../img/top.png);
+   background-size: cover;
+   background-position: 40% 70%;
+   text-align: center;
+   padding: 250px 0;
+   color: white;
+   margin-top: 83px;
+   font-family: variable.$font-en;
+   @include variable.mq(){
+      margin-top: 70px;
+   }
+}
+
+.top-title{
+   font-size: 42px;
+   letter-spacing: 0.3em;
+   margin-bottom: 12px;
+   font-weight: 600;
+   @include variable.mq(){
+      font-size: 30px;
+      margin-bottom: 2px;
+   }
+}
+
+.top-subtitle{
+   font-size: 18px;
+   letter-spacing: 0.1em;
+   @include variable.mq(){
+      font-size: 14px;
+   }
+}
+
+/*------------------------------------------------------
+about
+--------------------------------------------------------*/
+
+.about-wrapper{
+   display: flex;
+   align-items: center;
+   @include variable.mq(){
+      display: block;
+   }
+   .section-title-wrap{
+      width: 35%;
+      @include variable.mq(){
+         width: 100%;
+         margin-bottom: 48px;
+      }
+   }
+}
+
+
+.about-right{
+   width: 65%;
+   padding-left: 50px;
+   @include variable.mq(){
+      width: 100%;
+      padding-left: 0;
+   }
+}
+
+.about-name{
+   font-size: 24px;
+   font-weight: 500;
+   margin-bottom: 32px;
+   color: #000;
+   padding-bottom:16px;
+   letter-spacing: .15em;
+   border-bottom: 1px solid #000;
+   @include variable.mq(tab){
+      font-size: 18px;
+   }
+   @include variable.mq(){
+      font-size: 18px;
+      padding-bottom: 10px;
+      display: inline-block;
+      margin-bottom: 24px;
+   }
+}
+
+.about-text{
+   line-height: 1.7;
+   @include variable.mq(tab){
+      font-size: 12px;
+   }
+   @include variable.mq(){
+      font-size: 12px;
+   }
+}
+.about-name span{
+   font-size: 16px;
+   margin-left: 16px;
+   @include variable.mq(tab){
+      font-size: 14px;
+   }
+   @include variable.mq(){
+      font-size: 12px;
+   }
+}
+
+
+
+.about-skill-title{
+   margin-top: 50px;
+   margin-bottom: 16px;
+}
+.about-skills{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px ;
+   li{
+
+      padding: 3px 10px;
+      color: #fff;
+      background-color: #E1D7C6;
+      border-radius: 50px;
+      font-family: variable.$font-en;
+   
+   }
+}
+
+
+
+/*------------------------------------------------------
+service
+--------------------------------------------------------*/
+.service{
+   background-color: #F8F4EA;
+   padding: 120px 0 96px;
+   @include variable.mq(tab){
+      padding: 90px 0 56px;
+   }
+   @include variable.mq(){
+      padding: 90px 0 50px;
+   }
+   .section-title-wrap{
+      transform: rotate(90deg);
+      transform-origin: center center;
+      display: inline-block;
+      @include variable.mq(){
+         transform: rotate(0);
+      }
+   }
+
+   .section-title{
+      margin-top: 48px;
+      @include variable.mq(){
+         margin-top: 0;
+         letter-spacing: 0.4em;
+      }
+   }
+}
+.service-right{
+   width: 28%;
+   padding-top: 160px;
+   @include variable.mq(tab){
+      padding-top: 130px;
+   }
+   @include variable.mq(){
+      padding-top: 0;
+      margin-bottom: 56px;
+      width: 100%;
+   }
+
+}
+.service-title{
+   font-family: variable.$font-en;
+   font-size: 28px;
+   font-weight: bold;
+   letter-spacing: .2em;
+   position: relative;
+   padding-left: 54px;
+   margin-bottom: 42px;
+
+   @include variable.mq(tab){
+      font-size: 22px;
+      margin-bottom: 32px;
+   }
+   @include variable.mq(){
+      font-size: 20px;
+      margin-bottom: 24px;
+      padding-left: 36px;
+   }
+
+   &::before{
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 2px;
+      background-color: #676767;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      @include variable.mq(){
+         width: 24px;
+      }
+   }
+}
+
+.service-wrapper{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+   overflow: hidden;
+   @include variable.mq(){
+      display: block;
+   }
+}
+
+.service-list{
+   width: 70%;
+   @include variable.mq(){
+      width: 100%;
+   }
+}
+
+.service-item{
+   position: relative;
+   padding-bottom: 64px;
+   @include variable.mq(){
+      padding-bottom: 40px;
+   }
+}
+
+.service-img{
+   position: absolute;
+   width: 170px;
+   opacity: 0.05;
+}
+.service-img1{
+   top: 10%;
+   left: 47%;
+   @include variable.mq(tab){
+      top: 5%;
+   }
+   @include variable.mq(){
+      top: 0;
+      left: 32%;
+      width: 156px;
+   }
+}
+.service-img2{
+   top: 20%;
+   left: 30%;
+   width: 130px;
+   @include variable.mq(tab){
+      top: 26%;
+      left: 40%;
+   }
+   @include variable.mq(){
+      top: 19%;
+      left: 21%;
+      width: 115px;
+   }
+}
+.service-img3{
+   width: 175px;
+   top: 10%;
+   left: 37%;
+   @include variable.mq(tab){
+      top: 7%;
+      left: 24%;
+   }
+   @include variable.mq(){
+      top: 10%;
+      left: 27%;
+      width: 150px;
+   }
+}
+.service-text{
+   font-size: 14px;
+   letter-spacing: .2em;
+   line-height: 1.7;
+
+   @include variable.mq(){
+      font-size: 12px;
+   }
+}
+
+
+/*------------------------------------------------------
+work
+--------------------------------------------------------*/
+
+.work{
+   padding-bottom: 170px;
+   .section-title-wrap{
+      display: flex;
+      margin-bottom: 48px;
+      @include variable.mq(){
+         display: block;
+         margin-bottom: 48px;
+      }
+   }
+   .section-title{
+      margin-right: 24px;
+      @include variable.mq(tab){
+         margin-right: 12px;
+      }
+   }
+   .section-subtitle{
+      margin-top: 32px;
+      @include variable.mq(tab){
+         margin-top: 22px;
+      }
+      @include variable.mq(){
+         margin-top: 0;
+      }
+   }
+}
+
+
+.work-lead{
+   margin-bottom: 32px;
+   @include variable.mq(){
+      font-size: 12px;
+
+   }
+}
+
+.work-title{
+   margin-top: 10px;
+   font-size: 18px;
+
+   span{
+      font-size: 14px;
+   }
+}
+
+.work-img{
+   object-position: top;
+}
+
+.work-list{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 60px;
+   @include variable.mq(tab){
+      gap: 40px 32px;
+   }
+   @include variable.mq(){
+      gap: 40px;
+   }
+}
+
+.work-item{
+   width: calc((100% - 60px) / 2);
+   transition: opacity .3s;
+   aspect-ratio: 5 / 3;
+
+   @include variable.mq(tab){
+      width: calc((100% - 32px) / 2);
+   }
+   @include variable.mq(){
+      width: 100%;
+   }
+
+   &:hover{
+      .work-hover{
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+   img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+   }
+}
+.work-item a{
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+.work-hover{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(#fff, .9);
+   padding: 50px;
+   color: #000;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .3s;
+   p{
+      font-size: 14px;
+      padding-left: 3px;
+   }
+   @include variable.mq(tab){
+      padding: 24px 40px;
+   }
+}
+
+.work-ctg{
+   font-size: 12px;
+   display: inline-block;
+   font-weight: 300;
+   border: 1px solid #000;
+   padding: 3px 10px;
+   border-radius: 50px;
+}
+
+.work-title{
+   font-size: 18px;
+   margin-bottom: 50px;
+   padding-left: 3px;
+   @include variable.mq(tab){
+      margin-bottom: 28px;
+   }
+}
+
+.work-img-sp{
+   display: none;
+}
+/*------------------------------------------------------
+modal
+--------------------------------------------------------*/
+.modal{
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   display: none;
+
+}
+.modal-overlay{
+   background-color: rgba(#fff, 0.9);
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+}
+.modal-img-wrap{
+   position: absolute;
+   width: 40%;
+   height: 100vh;
+   top: 0;
+   left: 35%;
+   transform: translateX(-50%);
+   overflow: hidden;
+   @include variable.mq(){
+      width: 47%;
+      height: 90%;
+   }
+}
+.modal-img{
+   width: 100%;
+   height: 100%;
+   overflow: scroll;
+   overflow-x: hidden;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+.modal-img-wrap-sp{
+   position: absolute;
+   width: 20%;
+   height: 100vh;
+   top: 0;
+   left: 73%;
+   transform: translateX(-50%);
+   overflow: hidden;
+   @include variable.mq(){
+      width: 27%;
+      height: 90%;
+   }
+}
+.modal-img-sp{
+   width: 100%;
+   height: 100%;
+   overflow: scroll;
+   overflow-x: hidden;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+.modal-img::-webkit-scrollbar{
+   display: none;
+}
+.modal-img-sp::-webkit-scrollbar{
+   display: none;
+}
+.modal-btn{
+   position: absolute;
+   z-index: 120;
+   top: 92%;
+   left: 85%;
+   display: none;
+   @include variable.mq(){
+      left: 50%;
+      transform: translateX(-50%);
+      top: 94%;
+   }
+
+   &.is-active{
+      display: block;
+   }
+
+   a{
+      color: #000;
+      font-size: 14px;
+      border-bottom: 1px solid #676767;
+      padding: 3px 15px 3px 0;
+      transition: opacity .3s;
+      font-family: variable.$font-en;
+      position: relative;
+
+      &::after{
+         position: absolute;
+         content: "";
+         width: 8px;
+         height: 1px;
+         transform: rotate(30deg);
+         background-color: #676767;
+         bottom: 1px;
+         right: 0;
+      }
+      &:hover{
+         opacity: 0.7;
+      }
+      @include variable.mq(tab){
+         font-size: 12px;
+      }
+      @include variable.mq(){
+         font-size: 11px;
+      }
+   }
+}
+
+/*------------------------------------------------------
+contact
+--------------------------------------------------------*/
+.contact{
+   padding: 80px 0;
+   text-align: center;
+   background-color: #F8F4EA;
+   @include variable.mq(tab){
+      padding: 80px 0;
+
+   }
+
+   p{
+      @include variable.mq(){
+         font-size: 12px;
+      }
+   }
+   @include variable.mq(){
+      padding: 60px 0;
+      .section-title{
+         letter-spacing: .35em;
+      }
+   }
+
+}
+
+
+.contact img{
+   width: 10%;
+   margin-top: 18px;
+   opacity: 0.6;
+   @include variable.mq(){
+      width: 20%;
+   }
+}
+
+
+/*------------------------------------------------------
+footer
+--------------------------------------------------------*/
+
+footer{
+   font-family: variable.$font-en;
+   font-weight: bold;
+   letter-spacing: .2em;
+   background-color: #E1D7C6;
+   padding: 24px 0;
+   font-size: 12px;
+   text-align: end;
+
+}

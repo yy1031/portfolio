@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600&family=Work+Sans:wght@200;400;600&display=swap');
+$font-ja: 'Noto Sans JP', sans-serif;
+$font-en: 'Work Sans', sans-serif;
+
+$breakpoints: (
+  'sp': "(max-width: 767px)", 
+  'tab': "(min-width: 768px) and (max-width:1279px)", 
+  'pc': "(min-width: 1280px)"
+) !default;
+
+@mixin mq($breakpoint: sp) {
+		@media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
