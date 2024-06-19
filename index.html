@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex"/>
 
     <title>Yukako Tomura</title>
 
@@ -15,11 +16,11 @@
    <body>
     <header>
        <div class="container">
-          <h1 class="logo">YUKAKO TOMURA</h1>
+          <h1 class="logo"><a href="./index.html">YUKAKO TOMURA</a></h1>
           <nav class="head-nav">
              <ul>
                <li class="nav-item"><a href="#about">About</a></li>
-               <li class="nav-item"><a href="#service">Service</a></li>
+               <li class="nav-item"><a href="#service">Skills</a></li>
                <li class="nav-item"><a href="#work">Works</a></li>
                <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
@@ -28,7 +29,7 @@
              <p><a href="">Menu <span>▼</span></a></p>
              <ul class="nav-list-sp">
                <li class="nav-item-sp"><a href="#about">About</a></li>
-               <li class="nav-item-sp"><a href="#service">Service</a></li>
+               <li class="nav-item-sp"><a href="#service">Skills</a></li>
                <li class="nav-item-sp"><a href="#work">Works</a></li>
                <li class="nav-item-sp"><a href="#contact">Contact</a></li>
             </ul>
@@ -36,77 +37,82 @@
        </div>
     </header>
 
-    <section class="top">
+    <section class="top wow fadeIn">
        <div class="container">
-          <p class="top-title">My Portfolio</p>
+          <p class="top-title">This is<br>Yukako Tomura's<br>Portfolio.</p>
           <p class="top-subtitle">Thank you for visiting my page.</p>
        </div>
     </section>
 
     <section class="about" id="about">
        <div class="container">
-          <div class="about-wrapper">
-             <div class="section-title-wrap wow fadeInUp">
-               <h2 class="section-title">ABOUT</h2>
-               <div class="section-subtitle">Who is me?</div>
-             </div>
-            <div class="about-right">
+         <div class="section-title-wrap wow fadeInUp">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="section-subtitle">Who is me?</div>
+         </div>
+         <div class="about-content">
+            <div class="about-content-left wow fadeInUp">
+               <img src="./img/profile.JPG" alt="プロフィール画像">
+            </div>
+            <div class="about-content-right">
                <p class="about-name wow fadeInUp">戸村 悠香子<span>Yukako Tomura</span></p>
                <p class="about-text wow fadeInUp">
-                  神奈川県在住の会社員です。<br>
-                  2023年1月からデイトラのWEB制作コースを受講し始め、WEB制作を習得しました。<br>
-                  副業でWEB制作の仕事をしながら、自分のスキルももっとアップデートしていきたいと思っております。<br>
-                  お客様とのコミュニケーションを大切にし、ご要望に沿った丁寧なサイト制作を行います。
+                  2000年3月10日生まれ。<br>
+                  2022年3月、慶應義塾大学環境情報学部を卒業後、株式会社ベイクルーズに就職し、自社ブランドの店舗にて販売接客業務全般に携わってきました。<br>
+                  2023年2月からデイトラのWeb制作コースを受講し始め、Web制作を習得。<br>
+                  Photoshopも独学で習得しました。<br>
+                  学び続けることを忘れず、自分のスキルをどんどんアップデートしていきたいと思っております。<br>
                </p>
-               <div class="about-skill-wrapper wow fadeInUp">
-                  <p class="about-skill-title">ー My skill</p>
-                  <ul class="about-skills">
-                     <li>Photoshop</li>
-                     <li>HTML</li>
-                     <li>CSS</li>
-                     <li>jQuery</li>
-                     <li>Wordpress</li>
-                  </ul>
-               </div>
             </div>
-            </div>
+         </div>
        </div>
     </section>
 
     <section class="service" id="service">
       <div class="container">
           <div class="service-wrapper">
-             <div class="service-right wow fadeInUp">
-               <div class="section-title-wrap">
-                  <h2 class="section-title">SERVICE</h2>
-                  <div class="section-subtitle">What I can do.</div>
-                </div>
-             </div>
+            <div class="section-title-wrap">
+               <h2 class="section-title">SKILLS</h2>
+               <div class="section-subtitle">What I can do.</div>
+            </div>
             <div class="service-list">
                <div class="service-item service-item1 wow fadeInUp">
-                  <h3 class="service-title">Coding</h3>
-                  <div class="service-img service-img1"> <img src="./img/service1.png" alt="..."></div>
+                  <h3 class="service-title">Design</h3>
+                  <div class="service-img service-img1"> <img src="./img/service2.png" alt="design"></div>
                   <p class="service-text">
-                     作成されたデザインカンプを基に、HTML・CSSを用いてWebサイトを作成します。
-                     細部まで完全に再現することを心がけています。
+                     Photoshopを用いてサイトデザインをすることができます。
+                     Photoshopは、Udemyの講座などを用いて独学で勉強しました。
                   </p>
+                  <ul class="service-tags">
+                     <li class="service-tag">#photoshop</li>
+                  </ul>
                </div>
 
                <div class="service-item wow fadeInUp">
-                  <h3 class="service-title">Animation</h3>
-                  <div class="service-img service-img2"> <img src="./img/service2.png" alt="..."></div>
+                  <h3 class="service-title">Coding</h3>
+                  <div class="service-img service-img2"> <img src="./img/service1.png" alt="coding"></div>
                   <p class="service-text">
-                     jQueryを用いて、HTML・CSSで作成したサイトに対して簡単なアニメーションを付け加えます。
-                     画像が移り変わるスライダーや、クリックすると画像が拡大するモーダルなどを実装することができます。
+                     作成されたデザインカンプを基に、HTML・CSSを用いてWebサイトを作成します。
+                     更に、jQueryを用いて簡単なアニメーションを付け加えることができます。
                   </p>
+                  <ul class="service-tags">
+                     <li class="service-tag">#HTML</li>
+                     <li class="service-tag">#CSS</li>
+                     <li class="service-tag">#SCSS</li>
+                     <li class="service-tag">#jQuery</li>
+                  </ul>
                </div>
 
                <div class="service-item wow fadeInUp">
                   <h3 class="service-title">Wordpress</h3>
-                  <div class="service-img service-img3"> <img src="./img/service3.png" alt="..."></div>
+                  <div class="service-img service-img3"> <img src="./img/service3.png" alt="wordpress"></div>
                   <p class="service-text">
-                     Wordpressを使った動的サイトを作成します。静的HTMLをWordpress化する、一からWordpressサイトを作るなど、ご要望に応じて対応いたします。
+                     Wordpressを使った動的サイトを作成します。静的HTMLサイトを、phpを用いてWordpress化することができます。
                   </p>
+                  <ul class="service-tags">
+                     <li class="service-tag">#PHP</li>
+                     <li class="service-tag">#Wordpress</li>
+                  </ul>
                </div>
             </div>
          </div>
@@ -121,103 +127,74 @@
                <h2 class="section-title">WORKS</h2>
                <div class="section-subtitle">What I made.</div>
              </div>
-            <div class="work-lead wow fadeInUp">
-               全てデザインカンプをもとにコーディングしたものです。<br>
-               ロックがかかっているサイトは(ID:final / pass:final)で閲覧できます。
-            </div>
              <ul class="work-list">
                 <li class="work-item wow fadeInUp">
-                   <a href="" id="work1">
-                     <img class="work-img" src="./img/sobolon-pc.png" alt="sobolon">
-                     <img class="work-img-sp" src="./img/sobolon-sp.png" alt="sobolon">
+                   <a href="./work6.html" id="work1">
+                     <img class="work-img" src="./img/kireiclinic.png" alt="kireiclinic">
                      <div class="work-hover">
-                        <div class="work-ctg">LPコーディング</div>
-                        <div class="work-title">アクセサリーサイト</div>
-                        <p>デイトラの課題で制作しました。</p>
+                        <div class="work-ctg">Webデザイン、LPコーディング</div>
+                        <div class="work-title">医療脱毛サイト(架空)</div>
                      </div>
                    </a>
                 </li>
                 <li class="work-item wow fadeInUp">
-                   <a href="https://ravek.y-product.com/" id="work2">
-                     <img class="work-img" src="./img/ravek-pc.png" alt="ravek">
-                     <img class="work-img-sp" src="./img/ravek-sp.png" alt="ravek">
+                   <a href="./work1.html" id="work2">
+                     <img class="work-img" src="./img/ravek.png" alt="ravek">
                      <div class="work-hover">
                         <div class="work-ctg">LPコーディング</div>
                         <div class="work-title">Webサービス風サイト</div>
-                        <p>デイトラの自由課題で制作しました。</p>
                      </div>
                    </a>
                </li>
                <li class="work-item wow fadeInUp">
-                  <a href="http://yy1031.xsrv.jp/opencafe/" id="work3">
-                     <img class="work-img" src="./img/work-3.png" alt="opencafe">
-                     <img class="work-img-sp" src="./img/opencafe-sp.png" alt="opencafe">
+                  <a href="./work3.html" id="work3">
+                     <img class="work-img" src="./img/opencafe.png" alt="opencafe">
                      <div class="work-hover">
                         <div class="work-ctg">Wordpress</div>
                         <div class="work-title">カフェサイト</div>
-                        <p>デイトラの卒業課題として制作しました。全７ページ。<br>静的HTMLサイトの作成からWordpress化まで行いました。</p>
                      </div>
                   </a>
                </li>
                <li class="work-item wow fadeInUp">
-                  <a href="http://bestplanner.y-product.com" id="work4">
-                     <img class="work-img" src="./img/work-4.png" alt="bestplanner">
-                     <img class="work-img-sp" src="./img/bestplanner-sp.png" alt="bestplanner">
+                  <a href="./work2.html" id="work4">
+                     <img class="work-img" src="./img/bestplanner.png" alt="bestplanner">
                      <div class="work-hover">
                         <div class="work-ctg">LPコーディング</div>
                         <div class="work-title">ウェディングサイト</div>
-                        <p>デイトラの自由課題で制作しました。</p>
                      </div>
                   </a>
                </li>
                <li class="work-item wow fadeInUp">
-                  <a href="http://company.y-product.com" id="work5">
-                     <img class="work-img" src="./img/richlife.png" alt="richleft">
-                     <img class="work-img-sp" src="./img/richlife-sp.png" alt="richlife">
+                  <a href="./work4.html" id="work5">
+                     <img class="work-img" src="./img/richlife.png" alt="richlife">
                      <div class="work-hover">
                         <div class="work-ctg">LPコーディング</div>
                         <div class="work-title">家具・家電販売風サイト</div>
-                        <p>デイトラの自由課題で制作しました。</p>
                      </div>
                   </a>
                </li>
                <li class="work-item wow fadeInUp">
-                  <a href="http://company.y-product.com" id="work6">
-                     <img class="work-img" src="./img/richlife.png" alt="greensalad">
-                     <img class="work-img-sp" src="./img/richlife-sp.png" alt="greensalad">
+                  <a href="./work5.html" id="work6">
+                     <img class="work-img" src="./img/gardensalad.png" alt="greensalad">
                      <div class="work-hover">
                         <div class="work-ctg">LPコーディング</div>
                         <div class="work-title">表参道カフェ風サイト</div>
-                        <p>デイトラの自由課題で制作しました。</p>
                      </div>
                   </a>
                </li>
              </ul>
           </div>
-         
        </div>
     </section>
-    <div class="modal">
-       <div class="modal-overlay"></div>
-       <div class="modal-img-wrap">
-         <div class="modal-img"><img src="" alt=""></div>
-       </div>
-       <div class="modal-img-wrap-sp">
-         <div class="modal-img-sp"><img src="" alt=""></div>
-       </div>
-       <div class="modal-btn"><a href="" target="_blank">サイトを見る</a></div>
-   </div>
 
     <section class="contact" id="contact">
        <div class="container contact-wrapper">
-          
           <h2 class="section-title">CONTACT</h2>
           <div class="contact-right">
-            <p>下記のメールアドレスよりお気軽にご相談ください。</p>
+            <p>お問い合わせは下記のメールアドレスよりお願いいたします。</p>
             <img src="./img/mail.png" alt="mail">
-            <p>tomtomko.0310@gmail.com</p>
+            <p class="contact-add">tomtomko.0310@gmail.com</p>
           </div>
-          
        </div>
     </section>
 
