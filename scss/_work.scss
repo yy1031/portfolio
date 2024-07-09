@@ -61,10 +61,10 @@
    }
 
    dt{
-      width: 110px;
+      width: 160px;
    }
    dd{
-      width: calc(100% - 110px);
+      width: calc(100% - 160px);
    }
    a{
       text-decoration: underline;
@@ -98,6 +98,13 @@
 
 .work-img-pc{
    width: 68%;
+   img{
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+   }
+}
+
+.work-img-banner{
+   margin: 0 auto;
    img{
       box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
    }

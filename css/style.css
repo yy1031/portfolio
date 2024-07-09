@@ -70,10 +70,10 @@
   margin-top: 8px;
 }
 .work-dic-item dt {
-  width: 110px;
+  width: 160px;
 }
 .work-dic-item dd {
-  width: calc(100% - 110px);
+  width: calc(100% - 160px);
 }
 .work-dic-item a {
   text-decoration: underline;
@@ -109,6 +109,13 @@
   width: 68%;
 }
 .work-img-pc img {
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.work-img-banner {
+  margin: 0 auto;
+}
+.work-img-banner img {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
 }
 
