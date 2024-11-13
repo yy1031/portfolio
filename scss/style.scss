@@ -100,10 +100,12 @@ header{
    background-color: #fff;
 
    .container{
-      width: 100%;
+      max-width: 100%;
+      padding: 0 70px;
       display: flex;
       justify-content: space-between;
    }
+
    @include variable.mq(){
       height: 70px;
       .container{
@@ -414,7 +416,7 @@ service
    border-radius: 20px;
    padding: 24px 20px 30px;
    border: 1px solid #afafaf;
-
+   margin: auto;
    @include variable.mq(){
       width: 100%;
       max-width: 300px;
