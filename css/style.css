@@ -608,7 +608,7 @@ service
   border-radius: 20px;
   padding: 24px 20px 30px;
   border: 1px solid #afafaf;
-  margin: auto;
+  margin: 0 auto;
 }
 @media (max-width: 767px) {
   .service-item {
