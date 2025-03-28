@@ -58,13 +58,21 @@
    display: flex;
    &:not(:first-child){
       margin-top: 8px;
+
+      @include variable.mq(){
+         margin-top: 20px;
+      }
    }
 
    dt{
       width: 160px;
+      font-weight: bold;
    }
    dd{
       width: calc(100% - 160px);
+      @include variable.mq(){
+         width: 100%;
+      }
    }
    a{
       text-decoration: underline;
@@ -72,6 +80,10 @@
       &:hover{
          opacity: .7;
       }
+   }
+
+   @include variable.mq(){
+      display: block;
    }
 }
 
@@ -141,6 +153,11 @@
             width: 120%;
          }
 
+      }
+
+      @include variable.mq(){
+         font-size: 12px;
+         padding-bottom: 3px;
       }
    }
 }
