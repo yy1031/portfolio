@@ -215,33 +215,18 @@ section {
 }
 
 .section-title {
-  font-size: 42px;
+  font-size: clamp(32px, 3.58vw, 54px);
   letter-spacing: 0.4em;
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
   position: relative;
   margin-bottom: 4px;
 }
-@media (min-width: 768px) and (max-width:1279px) {
-  .section-title {
-    font-size: 42px;
-  }
-}
-@media (max-width: 767px) {
-  .section-title {
-    font-size: 32px;
-  }
-}
 
 .section-subtitle {
-  font-size: 14px;
+  font-size: clamp(12px, 1.1vw, 16px);
   letter-spacing: 0.3em;
   color: #afafaf;
-}
-@media (max-width: 767px) {
-  .section-subtitle {
-    font-size: 12px;
-  }
 }
 
 /*------------------------------------------------------
@@ -262,6 +247,8 @@ header .container {
   padding: 0 70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 @media (max-width: 767px) {
   header {
@@ -275,7 +262,6 @@ header .container {
 h1 {
   font-size: 24px;
   font-weight: 600;
-  line-height: 83px;
   font-family: "Work Sans", sans-serif;
   letter-spacing: 0.15em;
 }
@@ -297,11 +283,17 @@ h1 {
 }
 
 .head-nav {
-  line-height: 83px;
   font-size: 16px;
 }
 .head-nav ul {
   display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (min-width: 768px) and (max-width:1279px) {
+  .head-nav ul {
+    gap: 30px;
+  }
 }
 @media (max-width: 767px) {
   .head-nav {
@@ -309,14 +301,6 @@ h1 {
   }
 }
 
-.nav-item + .nav-item {
-  margin-left: 40px;
-}
-@media (min-width: 768px) and (max-width:1279px) {
-  .nav-item + .nav-item {
-    margin-left: 30px;
-  }
-}
 .nav-item a {
   transition: all 0.3s;
   padding-bottom: 5px;
@@ -356,18 +340,10 @@ h1 {
   padding-top: 22px;
   z-index: 100;
   width: 100%;
+  padding-left: 20px;
 }
-.head-nav-sp p a {
-  display: inline-block;
-  padding: 3px 3px 3px 20px;
-  width: 100%;
-  background-color: #fff;
-}
-.head-nav-sp p a span {
+.head-nav-sp p span {
   font-size: 10px;
-}
-.head-nav-sp:hover .nav-list-sp {
-  transform: translateY(0);
 }
 
 .nav-list-sp {
@@ -377,6 +353,9 @@ h1 {
   position: absolute;
   top: 70px;
   width: 100%;
+}
+.nav-list-sp.--open {
+  transform: translateY(0);
 }
 
 .nav-item-sp {
@@ -416,9 +395,14 @@ top
     margin-top: 70px;
   }
 }
+.top .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 70px;
+}
 
 .top-title {
-  font-size: 42px;
+  font-size: clamp(16px, 3.8vw, 56px);
   letter-spacing: 0.2em;
   margin-bottom: 12px;
   font-weight: 600;

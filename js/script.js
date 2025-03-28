@@ -15,4 +15,8 @@ $(function(){
       },
       400)
     });
+
+    $('.head-nav-sp').on('click', function () {
+      $('.nav-list-sp').toggleClass('--open');
+    });
 })

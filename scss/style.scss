@@ -61,31 +61,21 @@ section{
 }
 
 .section-title{
-   font-size: 42px;
+   font-size: clamp(32px, 3.58vw, 54px);
    letter-spacing: 0.4em;
    font-family: variable.$font-en;
    font-weight: bold;
    position: relative;
    margin-bottom: 4px;
 
-   @include variable.mq(tab){
-      font-size: 42px;
-   }
-   @include variable.mq(){
-      font-size: 32px;
-   }
-
 }
 
 .section-subtitle{
-   font-size: 14px;
+   font-size: clamp(12px, 1.1vw, 16px);
    letter-spacing: .3em;
    color: #afafaf;
-
-   @include variable.mq(){
-      font-size: 12px;
-   }
 }
+
 /*------------------------------------------------------
 header
 --------------------------------------------------------*/
@@ -104,6 +94,8 @@ header{
       padding: 0 70px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      height: 100%;
    }
 
    @include variable.mq(){
@@ -117,7 +109,6 @@ header{
 h1{
    font-size: 24px;
    font-weight: 600;
-   line-height: 83px;
    font-family: variable.$font-en;
    letter-spacing: .15em;
    @include variable.mq(tab){
@@ -133,11 +124,16 @@ h1{
 }
 
 .head-nav{
-
-   line-height: 83px;
    font-size: 16px;
+
    ul{
       display: flex;
+      align-items: center;
+      gap: 40px;
+
+      @include variable.mq(tab){
+         gap: 30px;
+      }
    }
    @include variable.mq(){
       display: none;
@@ -145,13 +141,6 @@ h1{
 }
 
 .nav-item{
-   & + & {
-      margin-left: 40px;
-      @include variable.mq(tab){
-         margin-left: 30px;
-      }
-   }
-   
    a{
       transition: all .3s;
       padding-bottom: 5px;
@@ -188,22 +177,14 @@ h1{
       padding-top: 22px;
       z-index: 100;
       width: 100%;
-      a{
-         display: inline-block;
-         padding: 3px 3px 3px 20px;
-         width: 100%;
-         background-color: #fff;
-         span{
-            font-size: 10px;
-         }
+      padding-left: 20px;
+
+      span{
+         font-size: 10px;
       }
+
    }
-   &:hover{
-      .nav-list-sp{
-         transform: translateY(0);
-      }
-   }
-  
+
 
 }
 .nav-list-sp{
@@ -213,6 +194,10 @@ h1{
    position: absolute;
    top: 70px;
    width: 100%;
+
+   &.--open{
+      transform: translateY(0);
+   }
 }
 .nav-item-sp{
    line-height: 46px;
@@ -246,10 +231,16 @@ top
    @include variable.mq(){
       margin-top: 70px;
    }
+
+   .container{
+      width: 100%;
+      max-width: 100%;
+      padding: 0 70px;
+   }
 }
 
 .top-title{
-   font-size: 42px;
+   font-size: clamp(16px, 3.8vw, 56px);
    letter-spacing: 0.2em;
    margin-bottom: 12px;
    font-weight: 600;
